@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name = "ButtonTextSize">25sp</dimen>
+    <dimen name = "ButtonWidth">0dp</dimen>
+    <dimen name = "ButtonMarginRight">5dp</dimen>
+    <dimen name = "LayoutHeight">0dp</dimen>
+    <dimen name = "TextSize">30sp</dimen>
+    <dimen name = "TextSize2">45sp</dimen>
+
+</resources>
