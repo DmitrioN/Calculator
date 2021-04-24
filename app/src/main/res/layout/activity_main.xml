@@ -9,31 +9,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/LayoutHeight"
-        android:layout_weight="3"
+        android:layout_weight="@dimen/Weight3"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="end"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:paddingRight="30dp"
-            android:text="2+3"
-            android:textColor="@color/white"
-            android:textSize="@dimen/TextSize" />
-
-        <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_gravity="end"
-            android:layout_weight="1"
-            android:layout_height="0dp"
+            android:layout_weight="@dimen/Weight1"
+            android:layout_height="@dimen/TextHeight"
             android:gravity="center_vertical"
-            android:paddingRight="30dp"
-            android:text="0"
-            android:textColor="@color/white"
+            android:paddingRight="@dimen/TextRight"
+            android:text="@string/TextValue"
+            android:textColor="@color/black"
             android:textSize="@dimen/TextSize2" />
 
     </LinearLayout>
@@ -44,10 +32,10 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/buttonDelete"
+            android:id="@+id/reset"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/ButtonС"
             android:textColor="@color/white"
@@ -56,10 +44,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonPercent"
+            android:id="@+id/percent"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/ButtonPercent"
             android:textColor="@color/white"
@@ -68,10 +56,10 @@
             android:backgroundTint="@color/purple"/>
 
         <Button
-            android:id="@+id/buttonShare"
+            android:id="@+id/division"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/ButtonDivision"
             android:textColor="@color/white"
@@ -80,10 +68,10 @@
             android:backgroundTint="@color/purple"/>
 
         <Button
-            android:id="@+id/buttonClear"
+            android:id="@+id/delete"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/ButtonDelete"
             android:textColor="@color/white"
@@ -98,10 +86,10 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/buttonSeven"
+            android:id="@+id/seven"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/Button7"
             android:textColor="@color/white"
@@ -109,10 +97,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonEight"
+            android:id="@+id/eight"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/Button8"
             android:textColor="@color/white"
@@ -120,10 +108,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonNine"
+            android:id="@+id/nine"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/Button9"
             android:textColor="@color/white"
@@ -131,10 +119,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonMultiply"
+            android:id="@+id/multiply"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/ButtonMultiply"
             android:textColor="@color/white"
@@ -149,10 +137,10 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/buttonFour"
+            android:id="@+id/four"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/Button4"
             android:textColor="@color/white"
@@ -160,10 +148,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonFive"
+            android:id="@+id/five"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/Button5"
             android:textColor="@color/white"
@@ -171,10 +159,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonSix"
+            android:id="@+id/six"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/Button6"
             android:textColor="@color/white"
@@ -182,10 +170,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonMinus"
+            android:id="@+id/minus"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/ButtonMinus"
             android:textColor="@color/white"
@@ -197,13 +185,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/LayoutHeight"
-        android:layout_weight="1">
+        android:layout_weight="@dimen/Weight1">
 
         <Button
-            android:id="@+id/buttonOne"
+            android:id="@+id/one"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/Button1"
             android:textColor="@color/white"
@@ -211,10 +199,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonTwo"
+            android:id="@+id/two"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/Button2"
             android:textColor="@color/white"
@@ -222,10 +210,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonThree"
+            android:id="@+id/three"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/Button3"
             android:textColor="@color/white"
@@ -233,10 +221,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonFold"
+            android:id="@+id/plus"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/ButtonAddition"
             android:textColor="@color/white"
@@ -248,13 +236,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/LayoutHeight"
-        android:layout_weight="1">
+        android:layout_weight="@dimen/Weight1">
 
         <Button
-            android:id="@+id/buttonPoint"
+            android:id="@+id/point"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/ButtonPoint"
             android:textColor="@color/white"
@@ -262,10 +250,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonZero"
+            android:id="@+id/zero"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/Weight1"
             android:background="@null"
             android:text="@string/Button0"
             android:textColor="@color/white"
@@ -273,10 +261,10 @@
             android:textSize="@dimen/ButtonTextSize" />
 
         <Button
-            android:id="@+id/buttonEqually"
+            android:id="@+id/equals"
             android:layout_width="@dimen/ButtonWidth"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="@dimen/Weight2"
             android:background="@null"
             android:text="@string/ButtonEqually"
             android:textColor="@color/white"

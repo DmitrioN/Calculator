@@ -10,9 +10,10 @@ public class CalculatorPresenter {
     private int secondArg;
 
     private StringBuilder inputStr = new StringBuilder();
-    private int actionSelected;
-    private State state;
 
+    private int actionSelected;
+
+    private State state;
 
     private enum State {
         firstArgInput,
@@ -39,37 +40,40 @@ public class CalculatorPresenter {
 
         if (inputStr.length() < 9) {
             switch (buttonId) {
-                case R.id.buttonZero:
+                case R.id.zero:
                     if (inputStr.length() != 0) {
                         inputStr.append("0");
                     }
                     break;
-                case R.id.buttonOne:
+                case R.id.one:
                     inputStr.append("1");
                     break;
-                case R.id.buttonTwo:
+                case R.id.two:
                     inputStr.append("2");
                     break;
-                case R.id.buttonThree:
+                case R.id.three:
                     inputStr.append("3");
                     break;
-                case R.id.buttonFour:
+                case R.id.four:
                     inputStr.append("4");
                     break;
-                case R.id.buttonFive:
+                case R.id.five:
                     inputStr.append("5");
                     break;
-                case R.id.buttonSix:
+                case R.id.six:
                     inputStr.append("6");
                     break;
-                case R.id.buttonSeven:
+                case R.id.seven:
                     inputStr.append("7");
                     break;
-                case R.id.buttonEight:
+                case R.id.eight:
                     inputStr.append("8");
                     break;
-                case R.id.buttonNine:
+                case R.id.nine:
                     inputStr.append("9");
+                    break;
+                case R.id.point:
+                    inputStr.append(".");
                     break;
             }
         }
@@ -77,22 +81,25 @@ public class CalculatorPresenter {
     }
 
     public void onActionPressed(int actionId) {
-        if (actionId == R.id.buttonEqually && state == State.secondArgInput && inputStr.length() > 0) {
+        if (actionId == R.id.equals && state == State.secondArgInput && inputStr.length() > 0) {
             secondArg = Integer.parseInt(inputStr.toString());
             state = State.resultShow;
             inputStr.setLength(0);
             switch (actionSelected) {
-                case R.id.buttonFold:
+                case R.id.plus:
                     inputStr.append(firstArg + secondArg);
                     break;
-                case R.id.buttonMinus:
+                case R.id.minus:
                     inputStr.append(firstArg - secondArg);
                     break;
-                case R.id.buttonMultiply:
+                case R.id.multiply:
                     inputStr.append(firstArg * secondArg);
                     break;
-                case R.id.buttonShare:
+                case R.id.division:
                     inputStr.append(firstArg / secondArg);
+                    break;
+                case R.id.percent:
+                    inputStr.append(firstArg % secondArg);
                     break;
             }
 
@@ -131,13 +138,15 @@ public class CalculatorPresenter {
 
     private char getOperationChar() {
         switch (actionSelected) {
-            case R.id.buttonFold:
+            case R.id.percent:
+                return '%';
+            case R.id.plus:
                 return '+';
-            case R.id.buttonMinus:
+            case R.id.minus:
                 return '-';
-            case R.id.buttonMultiply:
+            case R.id.multiply:
                 return '*';
-            case R.id.buttonShare:
+            case R.id.division:
             default:
                 return '/';
 
@@ -147,5 +156,11 @@ public class CalculatorPresenter {
     public void reset() {
         state = State.firstArgInput;
         inputStr.setLength(0);
+    }
+
+    public void delete() {
+        int lenString = inputStr.length();
+        state = State.firstArgInput;
+        inputStr.setLength(lenString - 1);
     }
 }

@@ -19,4 +19,5 @@
     <string name="ButtonPoint">.</string>
     <string name="Button0">0</string>
     <string name="ButtonEqually">=</string>
+    <string name="TextValue">0</string>
 </resources>

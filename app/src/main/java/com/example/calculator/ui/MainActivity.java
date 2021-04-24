@@ -10,37 +10,39 @@ import com.example.calculator.R;
 public class MainActivity extends AppCompatActivity {
 
     private CalculatorPresenter presenter;
-    private TextView result;
+
+    private TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        result = findViewById(R.id.textView);
+        int[] numberIds = new int[] {
+                R.id.zero,
+                R.id.one,
+                R.id.two,
+                R.id.three,
+                R.id.four,
+                R.id.five,
+                R.id.six,
+                R.id.seven,
+                R.id.eight,
+                R.id.nine,
+                R.id.point
 
-        int[] numberIds = new int[]{
-                R.id.buttonZero,
-                R.id.buttonOne,
-                R.id.buttonTwo,
-                R.id.buttonThree,
-                R.id.buttonFour,
-                R.id.buttonFive,
-                R.id.buttonSix,
-                R.id.buttonSeven,
-                R.id.buttonEight,
-                R.id.buttonNine
         };
 
-        int[] actionsIds = new int[]{
-                R.id.buttonFold,
-                R.id.buttonMinus,
-                R.id.buttonMultiply,
-                R.id.buttonShare,
-                R.id.buttonEqually
+        int[] actionsIds = new int[] {
+                R.id.plus,
+                R.id.minus,
+                R.id.multiply,
+                R.id.division,
+                R.id.equals,
+                R.id.percent
         };
 
-        result = findViewById(R.id.text);
+        text = findViewById(R.id.text);
 
         presenter = new CalculatorPresenter();
 
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 presenter.onNumPressed(view.getId());
-                result.setText(presenter.getText());
+                text.setText(presenter.getText());
             }
         };
 
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 presenter.onActionPressed(view.getId());
-                result.setText(presenter.getText());
+                text.setText(presenter.getText());
             }
         };
 
@@ -68,13 +70,20 @@ public class MainActivity extends AppCompatActivity {
             findViewById(actionsIds[i]).setOnClickListener(actionButtonOnclickListener);
         }
 
-        findViewById(R.id.buttonClear).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.reset).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 presenter.reset();
-                result.setText(presenter.getText());
+                text.setText(presenter.getText());
+            }
+        });
+
+        findViewById(R.id.delete).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.delete();
+                text.setText(presenter.getText());
             }
         });
     }
-
 }

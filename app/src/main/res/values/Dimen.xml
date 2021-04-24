@@ -3,7 +3,12 @@
 
     <dimen name = "ButtonTextSize">25sp</dimen>
     <dimen name = "ButtonWidth">0dp</dimen>
+    <dimen name = "TextHeight">0dp</dimen>
+    <dimen name = "Weight1">1</dimen>
+    <dimen name = "Weight2">1</dimen>
+    <dimen name = "Weight3">1</dimen>
     <dimen name = "ButtonMarginRight">5dp</dimen>
+    <dimen name = "TextRight">30dp</dimen>
     <dimen name = "LayoutHeight">0dp</dimen>
     <dimen name = "TextSize">30sp</dimen>
     <dimen name = "TextSize2">45sp</dimen>
